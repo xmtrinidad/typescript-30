@@ -1,23 +1,26 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import { setupCounter } from './counter'
+import './style.css';
+import { setDrumListeners } from './drum';
+
+
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+  <div class="container">
+    <div class="keys">
+      <button class="key">
+        <span class="key-letter">A</span>
+        <span class="key-description">BOOM</span>
+      </button>
+      <button class="key">
+        <span class="key-letter">A</span>
+        <span class="key-description">BOOM</span>
+      </button>
+      <button class="key">
+        <span class="key-letter">A</span>
+        <span class="key-description">BOOM</span>
+      </button>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
   </div>
-`
+`;
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+const btns = Array.from(document.querySelectorAll('button'));
+setDrumListeners(btns);
