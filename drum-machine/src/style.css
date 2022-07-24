@@ -32,7 +32,6 @@ body {
   padding: 24px;
 }
 
-.key:hover,
 .key:focus {
   border: 3px solid gold;
   outline: none;
