@@ -2,7 +2,6 @@ import './style.css';
 import { Drum, DRUMS, setDrumListeners, setKeydownListener } from './dromLogic';
 
 
-
 const drums: Drum[] = DRUMS
 
 const btnHTML = () => {

@@ -1,24 +1,20 @@
 export type Drum = {
   key: string,
   description: string,
-  file: string
+  src: string
 }
 
 export const DRUMS: Drum[] = [
-  {key: 'A', description: 'BOOM', file: ''},
-  {key: 'S', description: 'THING', file: ''},
-  {key: 'D', description: 'TEST', file: ''}
+  {key: 'A', description: 'DRUM 1', src: './sounds/boom.wav'},
+  {key: 'S', description: 'DRUM 2', src: ''},
+  {key: 'D', description: 'DRUM 3', src: ''},
+  {key: 'F', description: 'DRUM 4', src: ''},
+  {key: 'G', description: 'DRUM 5', src: ''},
+  {key: 'H', description: 'DRUM 6', src: ''},
+  {key: 'J', description: 'DRUM 7', src: ''},
+  {key: 'K', description: 'DRUM 8', src: ''},
+  {key: 'L', description: 'DRUM 9', src: ''}
 ];
-
-export function setupCounter(element: HTMLButtonElement) {
-  let counter = 0
-  const setCounter = (count: number) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
-  }
-  element.addEventListener('click', () => setCounter(++counter))
-  setCounter(0)
-}
 
 export function setDrumListeners(btns: HTMLButtonElement[]) {
   btns.forEach(btn => {
